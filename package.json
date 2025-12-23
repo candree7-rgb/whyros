@@ -1,0 +1,21 @@
+{
+  "name": "palacios-attribution",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "dev:collector": "pnpm --filter collector dev",
+    "dev:dashboard": "pnpm --filter dashboard dev",
+    "build:snippet": "pnpm --filter tracking-snippet build"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "typescript": "^5.3.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
