@@ -10,6 +10,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@hono/node-server": "^1.8.0",
     "@palacios/shared": "workspace:*",
     "@supabase/supabase-js": "^2.39.0",
     "hono": "^4.0.0"
