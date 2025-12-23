@@ -1,0 +1,14 @@
+{
+  "name": "@palacios/tracking-snippet",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/palacios.min.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0"
+  }
+}
