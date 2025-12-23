@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { supabase } from '../lib/supabase.js';
 import { isValidEmail, sanitizeString } from '../lib/utils.js';
-import type { IdentifyRequest } from '@palacios/shared';
+import type { IdentifyRequest } from '@palacios/shared/types';
 
 const identify = new Hono();
 

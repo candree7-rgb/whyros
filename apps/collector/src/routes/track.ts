@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { supabase } from '../lib/supabase.js';
-import { detectChannel, getPrimaryClickId, sanitizeString, isBot, getClientIp } from '../lib/utils.js';
-import type { TrackEventRequest, TrackResponse } from '@palacios/shared';
+import { detectChannel, getPrimaryClickId, sanitizeString, isBot } from '../lib/utils.js';
+import type { TrackEventRequest, TrackResponse } from '@palacios/shared/types';
 
 const track = new Hono();
 
@@ -54,9 +54,9 @@ track.post('/', async (c) => {
 /**
  * Erstellt oder aktualisiert einen Visitor
  */
-async function upsertVisitor(data: TrackEventRequest, headers: Headers): Promise<string> {
+async function upsertVisitor(data: TrackEventRequest, _headers: Headers): Promise<string> {
   const visitorId = data.visitor_id;
-  const clientIp = getClientIp(headers);
+  // TODO: Use getClientIp(headers) for geo-location lookup later
 
   // Prüfe ob Visitor existiert
   const { data: existingVisitor } = await supabase

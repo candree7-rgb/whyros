@@ -1,5 +1,5 @@
-import { CLICK_ID_PARAMS, PLATFORM_MAPPING } from '@palacios/shared';
-import type { Channel } from '@palacios/shared';
+import { PLATFORM_MAPPING } from '@palacios/shared/constants';
+import type { Channel } from '@palacios/shared/types';
 
 /**
  * Ermittelt den Channel basierend auf UTM-Parametern und Click-IDs
